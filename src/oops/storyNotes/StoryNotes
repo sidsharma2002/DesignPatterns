@@ -1,0 +1,46 @@
+
+
+[duckFamilyImpl1] :
+
+    A requirement came from product team to make ducks fly too. but as they are not developers they
+    don't know the repercussion of saying "ducks" should fly. I take "duck" literally and add a fly method
+    in the base class named as "duck" thinking all ducks would fly. but then we saw on prod that there was
+    some feature of rubber ducks that I was not aware of and now that also started to fly.
+
+    Then what I did was override the existing fly method in rubber duck class and removed super.fly (to do nothing)
+
+        1. This is not scalable as then maybe at some stage I may have to override 10s of method and make it do nothing.
+           That's why base classes should have minimum amount of logic/behaviour/algorithm.
+        2. Also this is not doesn't directly show the exact behaviours of a duck,
+           to see that I need to scroll and see what methods are overridden to do nothing.
+        3. Runtime behaviour changes are difficult.
+
+[duckFamilyImpl2] :
+
+    Now I thought to make the interface flyBehaviour and quackBehaviour and implement it in the class
+    where it is these behaviours are required. eg RubberDuck implements, QuackBehaviour. Similarly CityDuck implements
+    both fly and quack behaviours. This was I can directly see which behaviour does the specific duck implements to see
+    the functioning of it.
+
+    PitFalls :
+        1. Here we need to implement fly method in every class which implements flyBehaviour, maybe out of 100 classes
+           80 classes has same fly method logic/algorithm. hence we can't reuse the code here.
+
+        2. Now, If I there is some change required by product team in fly functioning in those 80 classes then I need to
+           make changes in all those 80 classes overridden fly method manually.
+
+    SOLUTION :
+        We just encapsulate the code in a DefaultFlyBehaviourImpl class and use it in every duck that has same fly algo.
+        now we just need to change things in DefaultFlyBehaviour.
+
+/////////////    [THIS TAKES US TO DESIGN PRINCIPLE 1 :]    /////////////
+
+    Identify the aspects of your application that vary and separate them from what stays the same.
+    All patterns used for this only.
+
+    example : here, as for in one step , default fly behaviour can change. Hence we encapsulated it (separated it).
+
+
+
+
+
