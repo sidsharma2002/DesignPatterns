@@ -1,0 +1,37 @@
+
+
+/////////////    [DESIGN PRINCIPLE 2 :]    /////////////
+
+    " Program to an interface, not an implementation. "
+
+    We already did that, eg : FlyBehaviour is an interface not an exact implementation, and we now can set different
+    behaviours dynamically. another example is LoginRepository and TestDoubleRepository.
+
+    Also this doesn't mean a java interface, it just means,  " program to a supertype. ".
+    So an abstract class can also be used instead of an interface.
+
+    eg : instead of,
+            Dog dog = new Dog();
+            dog.bark();
+
+         use,
+            Animal animal = new Dog();
+            animal.makeSound();
+
+         more better,
+            Animal animal = getAnimal();  // delegate the responsibility to some another class/method.
+            animal.makeSound();
+
+/////////////    [DESIGN PRINCIPLE 2 :]    /////////////
+
+    pitfall of duckFamilyImpl2 : We can't change type of a duck dynamically. see DuckOwner.class of duckFamilyImpl2
+
+[duckFamilyImpl3]
+
+    To solve this we can integrate the behaviour of fly and quack in the duck class itself and not in city/rubber duck,
+    We'll just give them responsibility to set their implementation. see DuckOwner.class of duckFamilyImpl3
+
+    All these DefaultFlyBehaviour, CanNotFlyBehaviour etc. is an Algorithm of FlyBehaviour Family, and these are interchangeable.
+    Similarly for QuackBehaviour.
+
+

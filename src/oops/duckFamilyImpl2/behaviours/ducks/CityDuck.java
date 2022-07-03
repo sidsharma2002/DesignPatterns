@@ -13,6 +13,14 @@ public class CityDuck extends Duck implements FlyBehaviour, QuackBehaviour {
 //        System.out.println("city duck is flying");
 //    }
 
+    public void setFlyBehaviour(FlyBehaviour flyBehaviour) {
+        this.flyBehaviour = flyBehaviour;
+    }
+
+    public void setQuackBehaviour(QuackBehaviour quackBehaviour) {
+        this.quackBehaviour = quackBehaviour;
+    }
+
     @Override
     public void fly() {
         flyBehaviour.fly();

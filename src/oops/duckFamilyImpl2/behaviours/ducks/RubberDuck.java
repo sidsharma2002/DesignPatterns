@@ -4,8 +4,14 @@ import oops.duckFamilyImpl2.behaviours.QuackBehaviour;
 
 public class RubberDuck extends Duck implements QuackBehaviour {
 
+    private QuackBehaviour quackBehaviour = new DefaultQuackBehaviourImpl();
+
     @Override
     public void quack() {
-        System.out.println("rubber duck is quacking");
+        quackBehaviour.quack();     // delegating the implementation
+    }
+
+    public void setQuackBehaviour(QuackBehaviour quackBehaviour) {
+        this.quackBehaviour = quackBehaviour;
     }
 }

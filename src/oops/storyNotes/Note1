@@ -30,16 +30,21 @@
            make changes in all those 80 classes overridden fly method manually.
 
     SOLUTION :
-        We just encapsulate the code in a DefaultFlyBehaviourImpl class and use it in every duck that has same fly algo.
-        now we just need to change things in DefaultFlyBehaviour.
+        We just encapsulate the code in a DefaultFlyBehaviourImpl class and use it in every child duck class that has same fly algo.
+        Now we just need to change things in DefaultFlyBehaviour.
+        Also now the cityDuck and rubberDuck can delegate the implementation of behaviours.
 
-/////////////    [THIS TAKES US TO DESIGN PRINCIPLE 1 :]    /////////////
+/////////////    [DESIGN PRINCIPLE 1 :]    /////////////
 
-    Identify the aspects of your application that vary and separate them from what stays the same.
-    All patterns used for this only.
+    " Identify the aspects of your application that vary and separate them from what stays the same. "
 
+    All patterns are used for this only.
     example : here, as for in one step , default fly behaviour can change. Hence we encapsulated it (separated it).
 
+/////////////    [DESIGN PRINCIPLE 1 :]    /////////////
+
+    Now, as said earlier, everything can change right, even at runtime. Hence we make this flyBehaviour/quackBehaviour dynamic ie.
+    can be set through setter function or can be injected as a dependency.
 
 
 
