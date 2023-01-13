@@ -1,7 +1,7 @@
-package oops.duckFamilyImpl2.behaviours.ducks;
+package oops.strategy.duckFamily.duckFamilyImpl2.behaviours.ducks;
 
-import oops.duckFamilyImpl2.behaviours.FlyBehaviour;
-import oops.duckFamilyImpl2.behaviours.QuackBehaviour;
+import oops.strategy.duckFamily.duckFamilyImpl2.behaviours.FlyBehaviour;
+import oops.strategy.duckFamily.duckFamilyImpl2.behaviours.QuackBehaviour;
 
 public class CityDuck extends Duck implements FlyBehaviour, QuackBehaviour {
     private FlyBehaviour flyBehaviour = new DefaultFlyingBehaviourImpl();

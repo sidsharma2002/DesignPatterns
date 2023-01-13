@@ -1,4 +1,4 @@
-package oops.duckFamilyImpl1;
+package oops.strategy.duckFamily.duckFamilyImpl1;
 
 public class Duck {
 

@@ -1,6 +1,6 @@
-package oops.duckFamilyImpl3;
+package oops.strategy.duckFamily.duckFamilyImpl3;
 
-import oops.duckFamilyImpl2.behaviours.FlyBehaviour;
+import oops.strategy.duckFamily.duckFamilyImpl2.behaviours.FlyBehaviour;
 
 public class CanNotFlyBehaviour implements FlyBehaviour {
     @Override

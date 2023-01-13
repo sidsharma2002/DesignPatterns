@@ -1,4 +1,4 @@
-package oops.duckFamilyImpl2.behaviours.ducks;
+package oops.strategy.duckFamily.duckFamilyImpl2.behaviours.ducks;
 
 public class DuckOwner {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package oops.duckFamilyImpl2.behaviours;
+package oops.strategy.duckFamily.duckFamilyImpl2.behaviours;
 
 /**
  * used to define fly behaviour.

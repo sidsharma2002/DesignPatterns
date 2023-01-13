@@ -1,6 +1,6 @@
-package oops.duckFamilyImpl2.behaviours.ducks;
+package oops.strategy.duckFamily.duckFamilyImpl2.behaviours.ducks;
 
-import oops.duckFamilyImpl2.behaviours.FlyBehaviour;
+import oops.strategy.duckFamily.duckFamilyImpl2.behaviours.FlyBehaviour;
 
 /**
  * concrete implementation of default flying behaviour. Helps in code encapsulation and reUseAbility

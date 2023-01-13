@@ -1,7 +1,4 @@
-package oops.duckFamilyImpl3;
-
-import oops.duckFamilyImpl2.behaviours.ducks.DefaultFlyingBehaviourImpl;
-import oops.duckFamilyImpl2.behaviours.ducks.DefaultQuackBehaviourImpl;
+package oops.strategy.duckFamily.duckFamilyImpl3;
 
 public class DuckOwner {
     public static void main(String[] args) {
