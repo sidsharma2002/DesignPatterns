@@ -1,0 +1,31 @@
+
+
+/////////////    [DESIGN PRINCIPLE 3 :]    /////////////
+
+    " Favour Composition over Inheritance. " or " Favour HAS-A over IS-A"
+
+    eg : class Manager implements Attitude, DressCode { // Manager "IS-A" Attitude
+         }
+
+         instead use,
+
+         class Manager {
+            Attitude attitude;  // Manager "HAS-A" Attitude
+            DressCode dressCode;
+
+            public void setAttitude() {
+            }
+
+            public void setDressCode() {
+            }
+         }
+
+         This helps in dynamic change of attitude, dressCode. Also logically these interfaces are set of algorithms,
+         and Manager class implementing this creates a sense that Manager is also an algorithm of this family.
+         Instead of Manager becoming itself an algorithm it should use these.
+
+/////////////    [DESIGN PRINCIPLE 3 :]    /////////////
+
+    Till now what we have studied is called "strategy pattern". i.e define a family of algorithms,
+    Encapsulate each one and make them interchangeable.
+
