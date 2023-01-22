@@ -1,0 +1,13 @@
+
+[coffeeShopImpl1] :
+
+    Beverage is an abstract parent class which has two main methods getDescription and getCost. All the child classes
+    inherit from that Beverage class and set its own attributes.
+
+    You can find some items in coffeeShopMenu like ChocoCoffee, ColdCoffee, HotCoffee and couple of hundreds.
+
+    The problem arises where suppose the prices of the coffees increase, also each item can have different configurations
+    like hot coffee with whipped milk or hot coffee with added cream, so there are hundreds of possible permutations.
+
+    One intuition would be to add all these properties in the Beverage Class itself and then just set these booleans on runtime.
+    This approach is represented in Impl2.
